@@ -1,4 +1,4 @@
-package com.example.workoutdiary.model.dao;
+package com.example.workoutdiary.model.database.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -16,7 +16,7 @@ public interface ExerciseDao {
     @Query("SELECT * FROM exercises WHERE id = :id")
     public Exercise getById(int id);
 
-    @Query("SELECT * FROM exercises WHERE workoutId = :workoutId")
+    @Query("SELECT * FROM exercises WHERE workout_id = :workoutId")
     public List<Exercise> getByWorkoutId(int workoutId);
 
     @Insert

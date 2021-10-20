@@ -1,4 +1,4 @@
-package com.example.workoutdiary.model;
+package com.example.workoutdiary.model.database;
 
 import androidx.room.TypeConverter;
 

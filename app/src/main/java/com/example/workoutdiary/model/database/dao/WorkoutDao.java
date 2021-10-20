@@ -1,4 +1,4 @@
-package com.example.workoutdiary.model.dao;
+package com.example.workoutdiary.model.database.dao;
 
 
 import androidx.room.Dao;
