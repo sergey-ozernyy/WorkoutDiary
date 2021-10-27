@@ -21,10 +21,10 @@ public class WorkoutListViewModel extends ViewModel {
         for(int i = 0; i < 100; i++){
             Workout workout = new Workout();
             workout.setDate(LocalDateTime.now());
-            ArrayList marks = new ArrayList();
+            ArrayList<String> marks = new ArrayList<String>();
             marks.add("f");
             workout.setMarks(marks);
-            workouts.add(new Workout());
+            workouts.add(workout);
         }
     }
 

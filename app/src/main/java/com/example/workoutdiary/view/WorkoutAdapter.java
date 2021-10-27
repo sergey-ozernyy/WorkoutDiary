@@ -2,6 +2,7 @@ package com.example.workoutdiary.view;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,9 +21,24 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutH
 
     protected static class WorkoutHolder extends RecyclerView.ViewHolder{
 
+        private TextView mDateTextView;
+        private TextView mMarkTextView;
+        private Workout mWorkout;
+
         public WorkoutHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_item_workout, parent, false));
+
+            mDateTextView = (TextView) itemView.findViewById(R.id.date);
+            mMarkTextView = (TextView) itemView.findViewById(R.id.mark);
         }
+
+        public void bind(Workout workout){
+            mWorkout = workout;
+            mDateTextView.setText(mWorkout.getDate().toString());
+            mMarkTextView.setText(mWorkout.getMarks().toString());
+        }
+
+
 
     }
 
@@ -36,7 +52,8 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutH
 
     @Override
     public void onBindViewHolder(@NonNull WorkoutHolder holder, int position) {
-        //holder.g
+        Workout workout = mWorkouts.get(position);
+        holder.bind(workout);
     }
 
 

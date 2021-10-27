@@ -28,8 +28,8 @@ public class WorkoutListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_workout_list, container, false);
         workoutRecyclerView = (RecyclerView) view.findViewById(R.id.workout_recycler_view);
         workoutRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        //updateUI();
-        workoutRecyclerView.setAdapter(new WorkoutAdapter(new WorkoutListViewModel().workouts));
+        updateUI();
+        //workoutRecyclerView.setAdapter(new WorkoutAdapter(new WorkoutListViewModel().workouts));
         return view;
     }
 
