@@ -29,8 +29,11 @@ public class Workout implements Serializable {
     @TypeConverters({ConverterMarks.class})
     public List<String> marks;
 
+    public Workout(){}
 
-    public Workout() {
+    public Workout(LocalDateTime date, List<String> marks) {
+        this.date = date;
+        this.marks = marks;
     }
 
     public int getId() {
