@@ -3,24 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/startFragment">
-    <fragment
-        android:id="@+id/startFragment"
-        android:name="com.example.workoutdiary.view.StartFragment"
-        android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
-        <action
-            android:id="@+id/action_startFragment_to_blankFragment"
-            app:destination="@id/blankFragment" />
-        <action
-            android:id="@+id/action_startFragment_to_workoutListFragment3"
-            app:destination="@id/workoutListFragment3" />
-    </fragment>
-    <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.example.workoutdiary.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
+    app:startDestination="@id/workoutListFragment3">
     <fragment
         android:id="@+id/workoutListFragment3"
         android:name="com.example.workoutdiary.view.WorkoutListFragment"

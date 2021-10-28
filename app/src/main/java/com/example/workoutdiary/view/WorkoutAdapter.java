@@ -19,6 +19,7 @@ import com.example.workoutdiary.model.Workout;
 import java.util.List;
 
 public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutHolder>{
+
     private List<Workout> mWorkouts;
 
     public WorkoutAdapter(List<Workout> workouts){
