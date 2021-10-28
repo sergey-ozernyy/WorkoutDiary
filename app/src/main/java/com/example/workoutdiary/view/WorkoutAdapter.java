@@ -1,10 +1,16 @@
 package com.example.workoutdiary.view;
 
+import android.app.Activity;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.workoutdiary.R;
@@ -19,13 +25,13 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutH
         mWorkouts = workouts;
     }
 
-    protected static class WorkoutHolder extends RecyclerView.ViewHolder{
+    protected static class WorkoutHolder extends RecyclerView.ViewHolder {
 
         private TextView mDateTextView;
         private TextView mMarkTextView;
         private Workout mWorkout;
 
-        public WorkoutHolder(LayoutInflater inflater, ViewGroup parent) {
+        public WorkoutHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.list_item_workout, parent, false));
 
             mDateTextView = (TextView) itemView.findViewById(R.id.date);
@@ -54,6 +60,14 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutH
     public void onBindViewHolder(@NonNull WorkoutHolder holder, int position) {
         Workout workout = mWorkouts.get(position);
         holder.bind(workout);
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Navigation.createNavigateOnClickListener(R.id.action_workoutListFragment_to_workoutFragment);
+            }
+        });
     }
 
 
@@ -62,6 +76,9 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutH
     public int getItemCount() {
         return mWorkouts.size();
     }
+
+
+
 
 
 }
