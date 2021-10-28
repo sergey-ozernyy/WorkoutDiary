@@ -62,12 +62,9 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutH
         holder.bind(workout);
 
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Navigation.createNavigateOnClickListener(R.id.action_workoutListFragment_to_workoutFragment);
-            }
-        });
+        holder.itemView.setOnClickListener(Navigation.createNavigateOnClickListener
+                (R.id.action_workoutListFragment3_to_workoutFragment2)
+        );
     }
 
 

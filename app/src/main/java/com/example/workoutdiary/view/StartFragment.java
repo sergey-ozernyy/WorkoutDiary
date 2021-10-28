@@ -49,7 +49,9 @@ public class StartFragment extends Fragment {
                 Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_blankFragment)
         );
 
-
+        buttonToRecycler.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_startFragment_to_workoutListFragment3)
+        );
 
     }
 
