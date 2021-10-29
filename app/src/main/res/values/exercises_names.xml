@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exercises_name">
+        <item>Жим лежа</item>
+        <item>Тяга вертикального блока</item>
+        <item>Тяга горизонтального блока</item>
+        <item>Подъем штанги на бицепс</item>
+    </string-array>
+</resources>
