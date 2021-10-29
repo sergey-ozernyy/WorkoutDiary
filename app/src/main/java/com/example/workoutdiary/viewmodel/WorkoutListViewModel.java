@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 import com.example.workoutdiary.model.Workout;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -22,7 +23,7 @@ public class WorkoutListViewModel extends ViewModel {
             Workout workout = new Workout();
             workout.setDate(LocalDateTime.now());
             ArrayList<String> marks = new ArrayList<String>();
-            marks.add("f");
+            marks.add("mark #" + i);
             workout.setMarks(marks);
             workouts.add(workout);
         }
